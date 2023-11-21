@@ -5,15 +5,14 @@ Rails.application.routes.draw do
              registrations: 'registrations'
            }
 
-  get '/products', to: 'products#index'
-  get '/products/:id', to: 'products#show'
+           resources :categories do
+            resources :products do
+              resources :images, module: :products
+            end
+        
+            resources :images, module: :categories
+          end
 
-
-  resource :categories, only: [:index, :show] do
-    resources :products, only: [:index, :show] do
-      resources :variants, only: [:index, :show]
-    end
-  end
     
 
 
