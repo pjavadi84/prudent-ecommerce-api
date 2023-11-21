@@ -48,5 +48,7 @@ group :development do
   gem "faraday"
   gem 'devise'
   gem 'devise-jwt'
+  gem 'rack-cors'
+  gem 'pry-rails'
 end
 
