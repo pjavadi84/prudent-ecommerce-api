@@ -1,4 +1,4 @@
-module Categories
+module Category
     class ImagesController < ApplicationController
       before_action :set_category
   

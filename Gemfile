@@ -50,5 +50,6 @@ group :development do
   gem 'devise-jwt'
   gem 'rack-cors'
   gem 'pry-rails'
+  gem 'pry-byebug'
 end
 

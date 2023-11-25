@@ -5,13 +5,14 @@ Rails.application.routes.draw do
              registrations: 'registrations'
            }
 
-           resources :categories do
-            resources :products do
-              resources :images, module: :products
+           
+           namespace :category_module do
+            resources :categories do
+              resources :products 
+              resources :images
             end
-        
-            resources :images, module: :categories
           end
+
 
     
 
